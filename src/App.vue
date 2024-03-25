@@ -9,7 +9,9 @@ import { ref } from 'vue';
 var showSidebar = ref(false);
 
 import { useTimelineStore } from '@/stores/timeline'
-  const timeline = useTimelineStore();
+const timeline = useTimelineStore();
+
+timeline.loadFromParam();
 </script>
 
 <template>

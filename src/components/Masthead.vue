@@ -1,6 +1,7 @@
 <template>
   <div class="masthead">
-    <div class="title"><fa-icon icon="fas fa-flask"></fa-icon></div>
+    <!--<fa-icon icon="fas fa-flask"></fa-icon>-->
+    <img src="@/assets/neatapp-logo.png" style="height:1.5em;">
     <div class="title">Timeline Builder (Preview)</div>
     <div class="spacer"></div>
     <div class="switch">

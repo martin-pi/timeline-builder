@@ -39,12 +39,16 @@
     <Card>
       <template #title>Sharing</template>
       <template #content>
-        <InputGroup>
-          <Dropdown v-model="sharingSelection" placeholder="Select a method" :options="sharingOptions" optionLabel="name" optionValue="value" optionDisabled="disabled"/>
-          <Button label="Do It"></Button>
-        </InputGroup>
-        <p>Your Sharing results will appear here.</p>
-        <Button label="Gzip" @click="timeline.gzip"></Button>
+        <div class="sidebar-form">
+          <InputGroup>
+            <Dropdown v-model="sharingSelection" placeholder="Select a method" :options="sharingOptions" optionLabel="name" optionValue="value" optionDisabled="disabled"/>
+            <Button label="Do It" @click="share()"></Button>
+          </InputGroup>
+          <div v-if="timeline.sharingResults">
+            <label for="share">Share Link</label>
+            <InputText id="share" v-model="timeline.sharingResults" disabled class="full-width"></InputText>
+          </div>
+        </div>
       </template>
     </Card>
 
@@ -77,9 +81,18 @@
     { name: 'Share as Link (Small Timelines)', value: 'param', disabled: false  },
     { name: 'Temporarily Cache to Server', value: 'cache', disabled: true  },
     { name: 'Permanently Save to Server', value: 'permanent', disabled: true },
-    { name: 'Download and Self-Host', value: 'html', disabled: false  },
+    { name: 'Download and Self-Host', value: 'html', disabled: true  },
   ]);
-  const sharingSelection = ref(undefined);
+  const sharingSelection = ref('param');
+
+  function share() {
+    if (this.sharingSelection == 'param') {
+      timeline.shareAsParam();
+    }
+    if (sharingSelection == 'cache') console.warn("Cache is unimplemented");
+    if (sharingSelection == 'permanent') console.warn("Permanent is unimplemented");
+    if (sharingSelection == 'html') console.warn("HTML Rendered is unimplemented");
+  }
 </script>
 
 <style lang="scss" scoped>
