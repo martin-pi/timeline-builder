@@ -89,9 +89,9 @@
     if (this.sharingSelection == 'param') {
       timeline.shareAsParam();
     }
-    if (sharingSelection == 'cache') console.warn("Cache is unimplemented");
-    if (sharingSelection == 'permanent') console.warn("Permanent is unimplemented");
-    if (sharingSelection == 'html') console.warn("HTML Rendered is unimplemented");
+    if (this.sharingSelection == 'cache') console.warn("Cache is unimplemented");
+    if (this.sharingSelection == 'permanent') console.warn("Permanent is unimplemented");
+    if (this.sharingSelection == 'html') console.warn("HTML Rendered is unimplemented");
   }
 </script>
 
