@@ -1,7 +1,7 @@
 <template>
   <div class="masthead">
     <div class="title"><fa-icon icon="fas fa-flask"></fa-icon></div>
-    <div class="title">Timeline Builder</div>
+    <div class="title">Timeline Builder (Preview)</div>
     <div class="spacer"></div>
     <div class="switch">
       <fa-icon icon="fas fa-eye"></fa-icon>

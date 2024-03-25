@@ -1,5 +1,5 @@
 # Timeline Builder
-This template should help get you started developing with Vue 3 in Vite.
+A weekend project to provide a simple editor and presentation system for timelines. [Try it now](https://timelines.neatapp.dev/)!
 
 ## Recommended IDE Setup
 

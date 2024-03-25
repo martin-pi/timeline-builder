@@ -50,7 +50,7 @@
 
     <Card>
       <template #content>
-        <p>Built by Rick Martin. <a href="">Source Available</a>.</p>
+        <p>Built by Rick Martin. <a href="https://github.com/martin-pi/timeline-builder">Source Available</a>.</p>
       </template>
     </Card>
 
